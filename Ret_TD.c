@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include"personaje.h"
 
 void capturar_enteros (){
 
@@ -73,6 +74,7 @@ int main (int argc, char*argv[])
     
                 break;
             case '3':
+            capturar_personaje();
                 break;
             default:
                 break;       
@@ -80,9 +82,7 @@ int main (int argc, char*argv[])
 
         fflush(stdin);
     }while(opc != '0');
-    
 
-    
     return 0;
 }
  
