@@ -23,9 +23,28 @@ float sum_prom=0;
 
 }
 
-int main ()
+void mostrar (int n, int elementos_in, char arreglo[])
+{
+    printf("El arreglo se mostrara %d veces\n",n);
+    int m=0;
+    for(m;m<n;m++)
+    {
+        printf("Arreglo %d: ",m+1);
+        int p=0;
+        for(p;p<elementos_in;p++)
+        {
+            printf("%c",arreglo[p]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main (int argc, char*argv[])
 {
     char opc;
+    int elementos_in, n=0;
+    char arreglo[50];
     do
     {
         printf("1) Capturar enteros\n");
@@ -40,6 +59,18 @@ int main ()
             capturar_enteros();
                 break;
             case '2':
+    printf("Cuantos elementos quieres introducir?: ");
+    scanf("%d",&elementos_in);
+    for(n;n<elementos_in;n++)
+    {
+        printf("Dame el elemento %d: ",n+1);
+        scanf("%s",&arreglo[n]);
+    }
+    printf("\nCuantas veces quieres mostrar el arreglo?: ");
+    scanf("%d",&n);
+ 
+    mostrar(n,elementos_in,arreglo);
+    
                 break;
             case '3':
                 break;
